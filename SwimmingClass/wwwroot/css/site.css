@@ -1,0 +1,99 @@
+/* Base font size e layout */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    padding-bottom: 60px; /* espaço para footer fixo */
+    box-sizing: border-box;
+}
+
+/* Botões e inputs focados */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Banner */
+.home-banner {
+    background: url('../images/banner/swimming-banner.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Features Section */
+.home-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px auto;
+    gap: 30px;
+    text-align: center;
+}
+
+.feature {
+    flex: 1 1 250px; /* Flexível, mas mínimo de 250px */
+    max-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+    .feature img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    .feature h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .feature p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+/* Responsivo para telas menores */
+@media (max-width: 767px) {
+    .home-banner {
+        padding: 60px 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .home-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

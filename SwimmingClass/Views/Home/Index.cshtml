@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Swimming School Home";
+}
+
+<!-- Link para o CSS da home -->
+<link rel="stylesheet" href="~/css/home/home.css" />
+
+<!-- Banner -->
+<div class="home-banner">
+    <div class="banner-content">
+        <img src="~/images/home/banner.png" alt="Banner">
+
+        <h1>Welcome to Our Swimming School</h1>
+        <p>Manage students, instructors, and swimming classes efficiently.</p>
+        <a class="btn btn-primary" asp-controller="Student" asp-action="Index">Students</a>
+        <a class="btn btn-primary" asp-controller="Instructor" asp-action="Index">Instructors</a>
+        <a class="btn btn-primary" asp-controller="SwimmingClass" asp-action="Index">Classes</a>
+    </div>
+</div>
+
+<!-- Features -->
+<div class="home-features container">
+    <div class="feature">
+        <a href="@Url.Action("Index", "Student")" class="feature-link">
+            <img src="~/images/home/students.png" alt="Students">
+            <h3>Students</h3>
+            <p>Keep track of all students, enrollments, and progress efficiently.</p>
+        </a>
+    </div>
+
+    <div class="feature">
+        <a href="@Url.Action("Index", "Instructor")" class="feature-link">
+            <img src="~/images/home/instructors.png" alt="Instructors">
+            <h3>Instructors</h3>
+            <p>Organize instructors, schedules, and teaching assignments easily.</p>
+        </a>
+    </div>
+
+    <div class="feature">
+        <a href="@Url.Action("Index", "SwimmingClass")" class="feature-link">
+            <img src="~/images/home/classes.png" alt="Classes">
+            <h3>Swimming Classes</h3>
+            <p>Schedule lessons, track availability, and avoid conflicts.</p>
+        </a>
+    </div>
+</div>
